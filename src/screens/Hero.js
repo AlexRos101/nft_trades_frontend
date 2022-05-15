@@ -1,6 +1,5 @@
 import React from 'react';
 import { Grid, Typography, Button, Box } from '@mui/material';
-import HeroImage from '../images/hero/hero.jpg';
 import useStyles from '../styles/styles';
 
 const Hero = () => {
@@ -32,7 +31,7 @@ const Hero = () => {
           </Button>
         </Grid>
         <Grid item xs={12} md={5}>
-          <img src={HeroImage} className={classes.largeImage} />
+          <img src={'images/hero/hero.jpg'} className={classes.largeImage} />
         </Grid>
       </Grid>
     </Box>

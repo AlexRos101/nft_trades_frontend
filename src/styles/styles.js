@@ -1,5 +1,4 @@
 import { makeStyles } from '@mui/styles';
-import HeroBackground from '../images/gradient.jpg';
 
 const styles = (theme) => {
   return {
@@ -33,7 +32,7 @@ const styles = (theme) => {
       minHeight: '600px',
       alignItems: 'center',
       justifyContent: 'center',
-      backgroundImage: `url(${HeroBackground})`,
+      backgroundImage: `url(images/gradient.jpg)`,
       marginTop: '-90px',
       paddingTop: '90px',
     },
