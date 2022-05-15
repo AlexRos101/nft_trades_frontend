@@ -1,4 +1,5 @@
 import { makeStyles } from '@mui/styles';
+import HeroBackground from '../images/gradient.jpg';
 
 const styles = (theme) => {
   return {
@@ -25,6 +26,34 @@ const styles = (theme) => {
       width: '40px',
       height: '40px',
     },
+    
+    heroBox: {
+      width: '100%',
+      display: 'flex',
+      minHeight: '600px',
+      alignItems: 'center',
+      justifyContent: 'center',
+      backgroundImage: `url(${HeroBackground})`,
+      marginTop: '-90px',
+      paddingTop: '90px',
+    },
+    gridContainer: {
+      display: 'flex',
+      alignItems: 'center',
+      maxWidth: '1300px',
+      padding: '50px',
+    },
+    title: {
+      paddingBottom: '15px',
+    },
+    subtitle: {
+      opacity: '0.4',
+      paddingBottom: '30px',
+    },
+    largeImage: {
+      width: '100%',
+    },
+
     formContainer: {
       flexGrow: 1,
       padding: '10px',
@@ -40,19 +69,6 @@ const styles = (theme) => {
     formHeading: {
       textAlign: 'center',
     },
-    heroBox: {
-      width: '100%',
-      display: 'flex',
-      minHeight: '600px',
-      alignItems: 'center',
-      justifyContent: 'center',
-    },
-    gridContainer: {
-      display: 'flex',
-      alignItems: 'center',
-      maxWidth: '1300px',
-      padding: '50px',
-    },
     aboutUsContainer: {
       width: '100%',
       display: 'flex',
@@ -65,16 +81,6 @@ const styles = (theme) => {
       opacity: '0.7',
       paddingBottom: '30px',
       fontSize: '18px',
-    },
-    title: {
-      paddingBottom: '15px',
-    },
-    subtitle: {
-      opacity: '0.4',
-      paddingBottom: '30px',
-    },
-    largeImage: {
-      width: '100%',
     },
     sectionGridContainer: {
       display: 'flex',

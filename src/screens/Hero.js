@@ -1,6 +1,6 @@
 import React from 'react';
 import { Grid, Typography, Button, Box } from '@mui/material';
-import myteam from '../images/myteam.jpg';
+import HeroImage from '../images/hero/hero.jpg';
 import useStyles from '../styles/styles';
 
 const Hero = () => {
@@ -11,23 +11,28 @@ const Hero = () => {
       <Grid container spacing={6} className={classes.gridContainer}>
         <Grid item xs={12} md={7}>
           <Typography variant="h3" fontWeight={700} className={classes.title}>
-            Let's scale your business
+            Buy, sell and <br />collect NFTs.
           </Typography>
           <Typography variant="h6" className={classes.subtitle}>
-            Hire professionals who will help your business make 10X your
-            previous income. With over 5years experience in Marketing & Business
-            strategy, we are your best client.
+          The world's largest digital marketplace <br />for crypto collectibles and non-fungible <br />tokens
           </Typography>
           <Button
             variant="contained"
-            color="primary"
+            color="secondary"
             sx={{ width: '200px', fontSize: '16px' }}
           >
-            HIRE US
+            Upload
+          </Button>
+          <Button
+            variant="contained"
+            color="warning"
+            sx={{ width: '200px', fontSize: '16px' }}
+          >
+            Explore
           </Button>
         </Grid>
         <Grid item xs={12} md={5}>
-          <img src={myteam} alt="My Team" className={classes.largeImage} />
+          <img src={HeroImage} className={classes.largeImage} />
         </Grid>
       </Grid>
     </Box>
