@@ -1,7 +1,9 @@
 import Header from "../components/Header"
 import Footer from "../components/Footer"
 import Hero from "../screens/Hero"
-import Section from "../screens/Section"
+import Hotbids from "../screens/Hotbids"
+import Subscribe from "../screens/Subscribe"
+
 import Testimonial from "../screens/Testimonial"
 import ContactUs from "../screens/ContactUs"
 import AboutUs from "../screens/AboutUs"
@@ -27,10 +29,11 @@ function Home(){
       <CssBaseline />
       <Header />
       <Hero />
-      <Section />
-      <AboutUs />
+      <Hotbids />
+      
       <Testimonial />
-      <ContactUs />
+
+      <Subscribe />
       <Footer />
       </ThemeProvider>
     </>

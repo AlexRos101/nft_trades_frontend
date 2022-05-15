@@ -15,3 +15,8 @@ code {
 .heroicons .MUI_root {
   font-size: 500px !important;
 }
+
+.inputRounded .MuiOutlinedInput-root{
+  border-radius: 50px;
+  border: solid 1px rgb(131 88 255);
+}
