@@ -16,7 +16,6 @@ import MenuIcon from '@mui/icons-material/Menu';
 import useStyles from '../../styles/styles';
 import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
-import logo from '../../images/logo.png';
 import AccountBalanceWalletIcon from '@mui/icons-material/AccountBalanceWallet';
 import PersonIcon from '@mui/icons-material/Person';
 import BedtimeIcon from '@mui/icons-material/Bedtime';
@@ -79,7 +78,7 @@ const Header = (props) => {
               <Link href="#" underline="none">
                 <Box component="img" className={classes.logo}
                   alt="Market Place"
-                  src={logo}
+                  src={'images/logo.png'}
                 />
               </Link>
               {!matches ? (<Search>
