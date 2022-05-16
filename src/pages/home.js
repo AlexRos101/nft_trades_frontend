@@ -3,10 +3,7 @@ import Footer from "../components/Footer"
 import Hero from "../screens/Hero"
 import Hotbids from "../screens/Hotbids"
 import Subscribe from "../screens/Subscribe"
-
-import Testimonial from "../screens/Testimonial"
-import ContactUs from "../screens/ContactUs"
-import AboutUs from "../screens/AboutUs"
+import SellItems from "../screens/SellItems"
 import '@fontsource/roboto/300.css';
 import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
@@ -31,8 +28,7 @@ function Home(){
       <Hero />
       <Hotbids />
       
-      <Testimonial />
-
+      <SellItems />
       <Subscribe />
       <Footer />
       </ThemeProvider>
