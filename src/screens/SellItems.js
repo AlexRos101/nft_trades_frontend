@@ -36,7 +36,7 @@ const SellItems = () => {
     },
   ];
   return (
-    <Box sx={{ flexGrow: 1, minHeight: '400px' }}>
+    <Box sx={{ flexGrow: 1, minHeight: '400px', backgroundImage:`url(images/gradient_light.jpg)` }}>
       <Grid container className={classes.sectionGridContainer}>
         {sectionItems.map((item) => (
           <Grid
