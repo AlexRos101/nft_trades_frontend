@@ -1,6 +1,8 @@
 import React from 'react';
-import { Grid, Typography, Button, Box } from '@mui/material';
+import { Grid, Typography, Box } from '@mui/material';
 import useStyles from '../styles/styles';
+import PrimaryButton from '../components/Button/PrimaryButton';
+import SecondaryButton from '../components/Button/SecondaryButton';
 
 const Hero = () => {
   const classes = useStyles();
@@ -15,20 +17,8 @@ const Hero = () => {
           <Typography variant="h6" className={classes.subtitle}>
           The world's largest digital marketplace <br />for crypto collectibles and non-fungible <br />tokens
           </Typography>
-          <Button
-            variant="contained"
-            color="secondary"
-            sx={{ width: '200px', fontSize: '16px' }}
-          >
-            Upload
-          </Button>
-          <Button
-            variant="contained"
-            color="warning"
-            sx={{ width: '200px', fontSize: '16px' }}
-          >
-            Explore
-          </Button>
+          <PrimaryButton text='Upload'></PrimaryButton>
+          <SecondaryButton text="Explore" />
         </Grid>
         <Grid item xs={12} md={5}>
           <img src={'images/hero/hero.jpg'} className={classes.largeImage} />

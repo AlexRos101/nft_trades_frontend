@@ -52,6 +52,21 @@ const styles = (theme) => {
     largeImage: {
       width: '100%',
     },
+    primaryButton: {
+      margin: '16px !important',
+      padding: '8px 32px !important',
+      backgroundColor: '#8358ff !important',
+      color: '#fff !important',
+      borderRadius: '99px !important',
+      boxShadow: "4px 5px 10px rgba(108,106,213,.25),inset 2px 2px 6px #a78df0,inset -5px -5px 10px #6336e4 !important"
+    },
+    secondaryButton: {
+      padding: '8px 32px !important',
+      backgroundColor: '#fff !important',
+      color: '#8358ff !important',
+      borderRadius: '99px !important',
+      boxShadow: "5px 5px 10px rgba(108,106,212,.25),inset 2px 2px 6px #eef1f9,inset -5px -5px 10px #dfe3ef !important;"
+    },
 
     formContainer: {
       flexGrow: 1,
