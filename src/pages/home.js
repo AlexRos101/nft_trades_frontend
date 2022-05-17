@@ -2,6 +2,7 @@ import Header from "../components/Header"
 import Footer from "../components/Footer"
 import Hero from "../screens/Hero"
 import Hotbids from "../screens/Hotbids"
+import Collections from "../screens/Collections"
 import Subscribe from "../screens/Subscribe"
 import SellItems from "../screens/SellItems"
 import '@fontsource/roboto/300.css';
@@ -27,6 +28,7 @@ function Home(){
       <Header />
       <Hero />
       <Hotbids />
+      <Collections />
       
       <SellItems />
       <Subscribe />

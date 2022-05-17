@@ -61,7 +61,7 @@ const Hotbids = () => {
   return (
     <Box sx={{ flexGrow: 1, minHeight: '400px', margin:'48px 90px'}}>
       <Box sx={{display:'flex', justifyContent: 'center', alignItems: 'center', margin: '32px'}}>
-        <img sx={{width:'40px'}} src="https://cdn.jsdelivr.net/npm/emoji-datasource-apple@7.0.2/img/apple/64/1f525.png" />
+        <img src="https://cdn.jsdelivr.net/npm/emoji-datasource-apple@7.0.2/img/apple/64/1f525.png" />
         <Typography variant="h3">Hot Bids</Typography>
       </Box>
       <Swiper

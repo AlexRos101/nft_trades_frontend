@@ -25,7 +25,6 @@ const styles = (theme) => {
       width: '40px',
       height: '40px',
     },
-    
     heroBox: {
       width: '100%',
       display: 'flex',
