@@ -79,7 +79,7 @@ const Header = (props) => {
               <Link href="#" underline="none">
                 <Box component="img" className={classes.logo}
                   alt="Market Place"
-                  src={'images/logo.png'}
+                  src={`images/logo${theme.palette.mode == 'dark' ? '_white' : ''}.png`}
                 />
               </Link>
               {!matches ? (<Search>

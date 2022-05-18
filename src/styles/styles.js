@@ -11,6 +11,7 @@ const styles = (theme) => {
     textRight: {textAlign: 'right'},
     my32: {marginTop: '32px', marginBottom: '32px'}, 
     mx32: {marginLeft: '32px', marginRight: '32px'}, 
+    mr16: {marginRight: '16px'},
     
     toolBar: {
       display: 'flex',
@@ -95,6 +96,21 @@ const styles = (theme) => {
       borderRadius: '99px',
       boxShadow: "5px 5px 10px rgba(108,106,212,.25),inset 2px 2px 6px #eef1f9,inset -5px -5px 10px #dfe3ef;"
     },
+    footerContainer: {
+      display: 'flex',
+      alignItems: 'center',
+      miHeight: '10vh',
+      padding: '20px',
+      justifyContent: 'center',
+      flexDirection: 'column',
+    },
+    footerText: {
+      paddingBottom: '10px',
+    },
+    footerDate: {
+      opacity: '0.4',
+    },
+
 
     formContainer: {
       flexGrow: 1,
@@ -147,21 +163,6 @@ const styles = (theme) => {
       marginBottom: '20px',
       fontSize: '16px',
       padding: '10px',
-    },
-    footerContainer: {
-      display: 'flex',
-      alignItems: 'center',
-      miHeight: '10vh',
-      padding: '20px',
-      justifyContent: 'center',
-      backgroundColor: '#f2f0f1',
-      flexDirection: 'column',
-    },
-    footerText: {
-      paddingBottom: '10px',
-    },
-    footerDate: {
-      opacity: '0.4',
     },
     testimonialCard: {
       backgroundColor: '#fff',
