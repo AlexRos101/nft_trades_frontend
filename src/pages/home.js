@@ -32,7 +32,7 @@ function Home(){
       <Header setTheme={toggleTheme} />
       <Hero />
       <Hotbids />
-      <Collections />
+      <Collections/>
       <Category />
       <SellItems />
       <Footer />

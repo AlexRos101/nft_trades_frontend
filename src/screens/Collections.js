@@ -4,9 +4,11 @@ import useStyles from '../styles/styles';
 import CollectionItem from '../components/CollectionItem';
 import PrimaryButton from '../components/Button/PrimaryButton';
 import CollectionMenu from '../components/CollectionMenu';
+import { useTheme } from '@mui/material/styles';
 
-const Collections = () => {
+const Collections = (props) => {
   const classes = useStyles();
+  const theme = useTheme();
 
   const items = [
     {
@@ -94,8 +96,9 @@ const Collections = () => {
       checked: true,
     },
   ];
+
   return (
-    <Box sx={{ flexGrow: 1, minHeight: '400px', padding:'48px 90px', textAlign:'center', backgroundImage:`url(images/gradient_light.jpg)`,}}>
+    <Box sx={{ flexGrow: 1, minHeight: '400px', padding:'48px 90px', textAlign:'center', backgroundImage:`url(images/gradient_${theme.palette.mode}.jpg)`,}}>
       <Box sx={{display:'flex', justifyContent: 'center', alignItems: 'center', margin: '32px'}}>
         <Typography variant="h3">Top collections over</Typography>
         <CollectionMenu />

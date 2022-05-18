@@ -29,7 +29,6 @@ const styles = (theme) => {
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',
-      backgroundImage: `url(images/gradient.jpg)`,
       marginTop: '-90px',
       paddingTop: '90px',
     },

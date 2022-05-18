@@ -3,9 +3,11 @@ import { Grid, Typography, Box } from '@mui/material';
 import useStyles from '../styles/styles';
 import SellItem from '../components/SellItem';
 import Subscribe from './Subscribe';
+import { useTheme } from '@mui/material/styles';
 
 const SellItems = () => {
   const classes = useStyles();
+  const theme = useTheme();
 
   const sectionItems = [
     {
@@ -33,8 +35,9 @@ const SellItems = () => {
       subtitle: 'Choose between auctions, fixed-price listings, and declining-price listings. You choose how you want to sell your NFTs!',
     },
   ];
+
   return (
-    <Box sx={{ flexGrow: 1, backgroundImage:`url(images/gradient_light.jpg)`, padding: '32px' }}>
+    <Box sx={{ flexGrow: 1, backgroundImage:`url(images/gradient_${theme.palette.mode}.jpg)`, padding: '32px' }}>
       <Box sx={{display:'flex', justifyContent: 'center', alignItems: 'center', margin: '32px'}}>
         <Typography variant="h3">Create and sell your NFTs</Typography>
       </Box>

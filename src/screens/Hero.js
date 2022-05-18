@@ -3,12 +3,14 @@ import { Grid, Typography, Box } from '@mui/material';
 import useStyles from '../styles/styles';
 import PrimaryButton from '../components/Button/PrimaryButton';
 import SecondaryButton from '../components/Button/SecondaryButton';
+import { useTheme } from '@mui/material/styles';
 
 const Hero = () => {
   const classes = useStyles();
+  const theme = useTheme();
 
   return (
-    <Box className={classes.heroBox}>
+    <Box className={classes.heroBox} sx={{backgroundImage: `url(images/gradient${theme.palette.mode=='dark' ? '_dark' : ''}.jpg)`}}>
       <Grid container spacing={6} className={classes.gridContainer}>
         <Grid item xs={12} md={7}>
           <Typography variant="h3" fontWeight={700} className={classes.title}>
