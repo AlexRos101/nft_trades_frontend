@@ -5,7 +5,7 @@ const styles = (theme) => {
     toolBar: {
       display: 'flex',
       justifyContent: 'space-between',
-      padding: '1.5rem 6rem !important',
+      padding: '1.5rem 6rem',
     },
     logo: {
       color: 'blue',
@@ -15,20 +15,19 @@ const styles = (theme) => {
     link: {
       color: "#000",
       fontWeight: "700",
-      fontSize: "1.2rem !important",
-      marginRight: "2rem !important"
+      fontSize: "1.2rem",
+      marginRight: "2rem"
     },
     menuIcon: {
       color: '#000',
-      border:'solid 1px #000 !important', 
-      color: '#000 !important', 
+      border:'solid 1px #000', 
+      color: '#000', 
       width: '40px',
       height: '40px',
     },
     heroBox: {
       width: '100%',
       display: 'flex',
-      minHeight: '600px',
       alignItems: 'center',
       justifyContent: 'center',
       backgroundImage: `url(images/gradient.jpg)`,
@@ -52,19 +51,19 @@ const styles = (theme) => {
       width: '100%',
     },
     primaryButton: {
-      margin: '16px !important',
-      padding: '8px 32px !important',
-      backgroundColor: '#8358ff !important',
-      color: '#fff !important',
-      borderRadius: '99px !important',
-      boxShadow: "4px 5px 10px rgba(108,106,213,.25),inset 2px 2px 6px #a78df0,inset -5px -5px 10px #6336e4 !important"
+      margin: '16px',
+      padding: '8px 32px',
+      backgroundColor: '#8358ff',
+      color: '#fff',
+      borderRadius: '99px',
+      boxShadow: "4px 5px 10px rgba(108,106,213,.25),inset 2px 2px 6px #a78df0,inset -5px -5px 10px #6336e4"
     },
     secondaryButton: {
-      padding: '8px 32px !important',
-      backgroundColor: '#fff !important',
-      color: '#8358ff !important',
-      borderRadius: '99px !important',
-      boxShadow: "5px 5px 10px rgba(108,106,212,.25),inset 2px 2px 6px #eef1f9,inset -5px -5px 10px #dfe3ef !important;"
+      padding: '8px 32px',
+      backgroundColor: '#fff',
+      color: '#8358ff',
+      borderRadius: '99px',
+      boxShadow: "5px 5px 10px rgba(108,106,212,.25),inset 2px 2px 6px #eef1f9,inset -5px -5px 10px #dfe3ef;"
     },
 
     formContainer: {
@@ -108,10 +107,10 @@ const styles = (theme) => {
       padding: '30px',
       width: '200px',
       borderRadius: '10px',
-      margin: '10px !important',
+      margin: '10px',
     },
     inputField: {
-      marginBottom: '20px !important',
+      marginBottom: '20px',
     },
     textArea: {
       width: '100%',
