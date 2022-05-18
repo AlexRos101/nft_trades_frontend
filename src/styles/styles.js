@@ -11,7 +11,11 @@ const styles = (theme) => {
     textRight: {textAlign: 'right'},
     my32: {marginTop: '32px', marginBottom: '32px'}, 
     mx32: {marginLeft: '32px', marginRight: '32px'}, 
+    mr32: {marginRight: '32px'},
+    my16: {marginTop: '16px', marginBottom: '16px'}, 
+    mx16: {marginLeft: '16px', marginRight: '16px'}, 
     mr16: {marginRight: '16px'},
+    mt32: {marginTop: '32px'},
     
     toolBar: {
       display: 'flex',
@@ -100,7 +104,7 @@ const styles = (theme) => {
       display: 'flex',
       alignItems: 'center',
       miHeight: '10vh',
-      padding: '20px',
+      padding: '64px',
       justifyContent: 'center',
       flexDirection: 'column',
     },

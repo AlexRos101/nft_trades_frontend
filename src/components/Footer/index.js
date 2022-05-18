@@ -63,6 +63,10 @@ const Footer = () => {
             </Grid>
           </Grid>
         </Grid>
+        <Box className={`${classes.mt32} ${classes.displayFlex} ${classes.justifyBetween}`}>
+          <Typography className={classes.footerDate}>© 2022 Xhibiter — Made by DeoThemes</Typography>
+          <Typography className={classes.footerDate}>Terms and conditions Privacy policy</Typography>
+        </Box>
       </Container>
     </Box>
   );

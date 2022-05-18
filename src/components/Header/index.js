@@ -142,7 +142,7 @@ const Header = (props) => {
                 <PersonIcon />
               </IconButton>
               <IconButton className={classes.menuIcon} onClick={() => props.setTheme()}>
-                {theme.palette.mode == 'dark' ? <BedtimeIcon /> : <LightModeIcon />}
+                {theme.palette.mode == 'dark' ? <LightModeIcon /> : <BedtimeIcon />}
               </IconButton>
             </Box>}
           </Toolbar>
