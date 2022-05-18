@@ -19,7 +19,6 @@ const styles = (theme) => {
       marginRight: "2rem"
     },
     menuIcon: {
-      color: '#000',
       border:'solid 1px #000', 
       color: '#000', 
       width: '40px',

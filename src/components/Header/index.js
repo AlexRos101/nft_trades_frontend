@@ -140,7 +140,7 @@ const Header = (props) => {
               <IconButton className={classes.menuIcon}>
                 <PersonIcon />
               </IconButton>
-              <IconButton className={classes.menuIcon}>
+              <IconButton className={classes.menuIcon} onClick={() => props.setTheme('dark')}>
                 <BedtimeIcon />
               </IconButton>
             </Box>}

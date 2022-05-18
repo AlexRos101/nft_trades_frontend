@@ -10,31 +10,33 @@ import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
 import CssBaseline from '@mui/material/CssBaseline';
-import { createTheme, ThemeProvider, StyledEngineProvider } from '@mui/material/styles';
-
-const theme = createTheme({
-    typography: {
-      fontFamily: [
-        'Poppins',
-        'sans-serif',
-      ].join(','),
-    },});
+import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { useState } from "react"
 
 function Home(){
+  const [darkMode, setDarkMode] = useState(false);
+  const theme = createTheme({
+    palette: {
+      mode: darkMode ? "dark" : "light"
+    }
+  })
+
+  const toggleTheme = () => {
+    setDarkMode(!darkMode)
+  }
+  
     return (
     <>
     <ThemeProvider theme={theme}>
-      <StyledEngineProvider injectFirst>
-        <CssBaseline />
-        <Header />
-        <Hero />
-        <Hotbids />
-        <Collections />
-        <Category />
-        <SellItems />
-        <Footer />
-      </StyledEngineProvider>
-      </ThemeProvider>
+      <CssBaseline />
+      <Header setTheme={toggleTheme} />
+      <Hero />
+      <Hotbids />
+      <Collections />
+      <Category />
+      <SellItems />
+      <Footer />
+    </ThemeProvider>
     </>
   );
 }
