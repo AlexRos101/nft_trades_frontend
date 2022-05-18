@@ -10,7 +10,7 @@ const Hero = () => {
   const theme = useTheme();
 
   return (
-    <Box className={classes.heroBox} sx={{backgroundImage: `url(images/gradient${theme.palette.mode=='dark' ? '_dark' : ''}.jpg)`}}>
+    <Box className={classes.heroBox}>
       <Grid container spacing={6} className={classes.gridContainer}>
         <Grid item xs={12} md={7}>
           <Typography variant="h3" fontWeight={700} className={classes.title}>

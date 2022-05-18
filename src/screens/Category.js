@@ -1,5 +1,5 @@
 import React from 'react';
-import { Grid, Typography, Box } from '@mui/material';
+import { Grid, Typography, Box, Container } from '@mui/material';
 import useStyles from '../styles/styles';
 import CategoryItem from '../components/CategoryItem'
 
@@ -65,24 +65,26 @@ const Category = () => {
     },
   ];
   return (
-    <Box sx={{ flexGrow: 1, minHeight: '400px', margin:'48px 90px'}}>
+    <Box sx={{ flexGrow: 1, minHeight: '400px'}}>
       <Box sx={{display:'flex', justifyContent: 'center', alignItems: 'center', margin: '32px'}}>
         <img src="https://cdn.jsdelivr.net/npm/emoji-datasource-apple@7.0.2/img/apple/64/26a1.png" />
         <Typography variant="h3">Trending categories</Typography>
       </Box>
-      <Grid container className={classes.sectionGridContainer}>
-        {items.map((item) => (
-          <Grid
-            item
-            xs={12}
-            md={2.5}
-            minHeight={100}
-            key={item.id}
-          >
-            <CategoryItem {...item} />
-          </Grid>
-        ))}
-      </Grid>
+      <Container maxWidth="lg">
+        <Grid container className={classes.sectionGridContainer} spacing={4}>
+          {items.map((item) => (
+            <Grid
+              item
+              xs={12}
+              md={2.5}
+              minHeight={100}
+              key={item.id}
+            >
+              <CategoryItem {...item} />
+            </Grid>
+          ))}
+        </Grid>
+      </Container>
     </Box>
   );
 };

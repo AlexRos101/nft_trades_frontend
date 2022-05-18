@@ -19,6 +19,7 @@ import useMediaQuery from '@mui/material/useMediaQuery';
 import AccountBalanceWalletIcon from '@mui/icons-material/AccountBalanceWallet';
 import PersonIcon from '@mui/icons-material/Person';
 import BedtimeIcon from '@mui/icons-material/Bedtime';
+import LightModeIcon from '@mui/icons-material/LightMode';
 import StyledInputBase from './Search/StyledInputBase';
 import Search from './Search';
 import SearchIconWrapper from './Search/SearchIconWrapper';
@@ -140,8 +141,8 @@ const Header = (props) => {
               <IconButton className={classes.menuIcon}>
                 <PersonIcon />
               </IconButton>
-              <IconButton className={classes.menuIcon} onClick={() => props.setTheme('dark')}>
-                <BedtimeIcon />
+              <IconButton className={classes.menuIcon} onClick={() => props.setTheme()}>
+                {theme.palette.mode == 'dark' ? <BedtimeIcon /> : <LightModeIcon />}
               </IconButton>
             </Box>}
           </Toolbar>

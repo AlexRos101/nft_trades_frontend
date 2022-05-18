@@ -1,13 +1,11 @@
 import React from 'react';
-import { Grid, Typography, Box } from '@mui/material';
+import { Grid, Typography, Box, Container } from '@mui/material';
 import useStyles from '../styles/styles';
 import SellItem from '../components/SellItem';
 import Subscribe from './Subscribe';
-import { useTheme } from '@mui/material/styles';
 
 const SellItems = () => {
   const classes = useStyles();
-  const theme = useTheme();
 
   const sectionItems = [
     {
@@ -37,24 +35,26 @@ const SellItems = () => {
   ];
 
   return (
-    <Box sx={{ flexGrow: 1, backgroundImage:`url(images/gradient_${theme.palette.mode}.jpg)`, padding: '32px' }}>
+    <Box className={classes.sellItems}>
       <Box sx={{display:'flex', justifyContent: 'center', alignItems: 'center', margin: '32px'}}>
         <Typography variant="h3">Create and sell your NFTs</Typography>
       </Box>
-      <Grid container className={classes.sectionGridContainer}>
-        {sectionItems.map((item) => (
-          <Grid
-            item
-            xs={12}
-            md={2.5}
-            key={item.id}
-          >
-            <SellItem {...item} />
-          </Grid>
-        ))}
-      </Grid>
+      <Container maxWidth="lg">
+        <Grid container className={classes.sectionGridContainer}>
+          {sectionItems.map((item) => (
+            <Grid
+              item
+              xs={12}
+              md={2.5}
+              key={item.id}
+            >
+              <SellItem {...item} />
+            </Grid>
+          ))}
+        </Grid>
 
-      <Subscribe />
+        <Subscribe />
+      </Container>
     </Box>
   );
 };

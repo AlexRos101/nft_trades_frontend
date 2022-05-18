@@ -1,7 +1,17 @@
 import { makeStyles } from '@mui/styles';
 
 const styles = (theme) => {
+  const isDark = theme.palette.mode == 'dark'
   return {
+    displayFlex: {display: 'flex', alignItems: 'center'},
+    justifyBetween: {justifyContent: 'space-between'},
+    justifyCenter: {justifyContent: 'center'},
+    textCenter: {textAlign: 'center'},
+    textLeft: {textAlign: 'left'},
+    textRight: {textAlign: 'right'},
+    my32: {marginTop: '32px', marginBottom: '32px'}, 
+    mx32: {marginLeft: '32px', marginRight: '32px'}, 
+    
     toolBar: {
       display: 'flex',
       justifyContent: 'space-between',
@@ -20,7 +30,8 @@ const styles = (theme) => {
     },
     menuIcon: {
       border:'solid 1px #000', 
-      color: '#000', 
+      backgroundColor: `${isDark ? 'rgba(0, 0, 0, 0.1)' : '#fff'}`,
+      color: `${isDark ? '#fff' : '#000'}`,
       width: '40px',
       height: '40px',
     },
@@ -31,12 +42,33 @@ const styles = (theme) => {
       justifyContent: 'center',
       marginTop: '-90px',
       paddingTop: '90px',
+      backgroundImage: `url(images/gradient${isDark ? '_dark' : ''}.jpg)`
+    },
+    hotBids: {
+      margin: '32px 0',
+    },
+    hotBidItem: {
+      border:'solid 1px rgba(0, 0, 0, 0.2)', 
+      borderRadius:'10px', 
+      maxWidth: '230px', 
+      padding: '16px',
+    },
+    collections: {
+      flexGrow: 1, 
+      minHeight: '400px', 
+      textAlign:'center', 
+      backgroundImage:`url(images/gradient_${theme.palette.mode}.jpg)`,
     },
     gridContainer: {
       display: 'flex',
       alignItems: 'center',
       maxWidth: '1300px',
       padding: '50px',
+    },
+    sellItems: {
+      flexGrow: 1, 
+      backgroundImage:`url(images/gradient_${theme.palette.mode}.jpg)`, 
+      padding: '32px'
     },
     title: {
       paddingBottom: '15px',

@@ -1,14 +1,12 @@
 import React from 'react';
-import { Grid, Typography, Box } from '@mui/material';
+import { Grid, Typography, Box, Container } from '@mui/material';
 import useStyles from '../styles/styles';
 import CollectionItem from '../components/CollectionItem';
 import PrimaryButton from '../components/Button/PrimaryButton';
 import CollectionMenu from '../components/CollectionMenu';
-import { useTheme } from '@mui/material/styles';
 
 const Collections = (props) => {
   const classes = useStyles();
-  const theme = useTheme();
 
   const items = [
     {
@@ -98,26 +96,27 @@ const Collections = (props) => {
   ];
 
   return (
-    <Box sx={{ flexGrow: 1, minHeight: '400px', padding:'48px 90px', textAlign:'center', backgroundImage:`url(images/gradient_${theme.palette.mode}.jpg)`,}}>
-      <Box sx={{display:'flex', justifyContent: 'center', alignItems: 'center', margin: '32px'}}>
-        <Typography variant="h3">Top collections over</Typography>
-        <CollectionMenu />
-      </Box>
+    <Box className={classes.collections}>
+      <Container maxWidth="lg">
+        <Box sx={{display:'flex', justifyContent: 'center', alignItems: 'center', margin: '32px'}}>
+          <Typography variant="h3">Top collections over</Typography>
+          <CollectionMenu />
+        </Box>
 
-      <Grid container className={classes.sectionGridContainer}>
-        {items.map((item) => (
-          <Grid
-            item
-            xs={12}
-            md={2.5}
-            minHeight={100}
-            key={item.id}
-          >
-            <CollectionItem {...item} />
-          </Grid>
-        ))}
-      </Grid>
-
+        <Grid container className={classes.sectionGridContainer} spacing={4}>
+          {items.map((item) => (
+            <Grid
+              item
+              xs={12}
+              md={2.5}
+              minHeight={100}
+              key={item.id}
+            >
+              <CollectionItem {...item} />
+            </Grid>
+          ))}
+        </Grid>
+      </Container>
       <PrimaryButton text="Go to Rankings" />
     </Box>
   );

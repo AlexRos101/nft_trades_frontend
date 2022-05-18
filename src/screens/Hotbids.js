@@ -1,12 +1,16 @@
 import React from 'react';
-import { Grid, Typography, Box } from '@mui/material';
+import { Grid, Typography, Box, Container } from '@mui/material';
 import useStyles from '../styles/styles';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import HotbidItem from '../components/HotbidItem'
+import { useTheme } from '@mui/material/styles';
+import useMediaQuery from '@mui/material/useMediaQuery';
 
 const Hotbids = () => {
   const classes = useStyles();
+  const theme = useTheme();
+  const matches = useMediaQuery(theme.breakpoints.down('sm'));
 
   const sectionItems = [
     {
@@ -58,23 +62,22 @@ const Hotbids = () => {
       like: '125',
     },
   ];
+
   return (
-    <Box sx={{ flexGrow: 1, minHeight: '400px', margin:'48px 90px'}}>
-      <Box sx={{display:'flex', justifyContent: 'center', alignItems: 'center', margin: '32px'}}>
+    <Box className={classes.hotBids}>
+      <Box className={`${classes.displayFlex} ${classes.justifyCenter} ${classes.my32}`}>
         <img src="https://cdn.jsdelivr.net/npm/emoji-datasource-apple@7.0.2/img/apple/64/1f525.png" />
         <Typography variant="h3">Hot Bids</Typography>
       </Box>
-      <Swiper
-        slidesPerView={4}
-        // onSlideChange={() => console.log('slide change')}
-        // onSwiper={(swiper) => console.log(swiper)}
-      >
-        {sectionItems.map((item) => (
-          <SwiperSlide key={item.id}>
-            <HotbidItem {...item} />
-          </SwiperSlide>
-        ))}
-      </Swiper>
+      <Container maxWidth="lg" spacing={4}>
+        <Swiper slidesPerView={matches ? 1 : 4} >
+          {sectionItems.map((item) => (
+            <SwiperSlide key={item.id}>
+              <HotbidItem {...item} />
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </Container>
     </Box>
   );
 };

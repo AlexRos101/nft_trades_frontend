@@ -3,12 +3,14 @@ import useScrollTrigger from '@mui/material/useScrollTrigger';
 import PropTypes from 'prop-types';
 import { Grid, Typography, Box } from '@mui/material';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
+import useStyles from '../styles/styles';
 
 function HotbidItem(props) {
   const { src, title, subtitle, amount, like } = props;
+  const classes = useStyles();
   
   return (
-    <Box sx={{border:'solid 1px rgba(0, 0, 0, 0.2)', borderRadius:'10px', maxWidth: '230px', padding: '16px'}}>
+    <Box className={classes.hotBidItem}>
       <img src={src} />
       <Box sx={{display:'flex', justifyContent: 'space-between', alignItems: 'center',}}>
         <Typography variant="h6">{title}</Typography>
