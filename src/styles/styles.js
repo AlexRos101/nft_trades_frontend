@@ -111,7 +111,10 @@ const styles = (theme) => {
       backgroundColor: '#fff',
       color: '#8358ff',
       borderRadius: '99px',
-      boxShadow: "5px 5px 10px rgba(108,106,212,.25),inset 2px 2px 6px #eef1f9,inset -5px -5px 10px #dfe3ef;"
+      boxShadow: "5px 5px 10px rgba(108,106,212,.25),inset 2px 2px 6px #eef1f9,inset -5px -5px 10px #dfe3ef;",
+      '&:hover': {
+        backgroundColor: '#fff',
+      },
     },
     footerContainer: {
       display: 'flex',
