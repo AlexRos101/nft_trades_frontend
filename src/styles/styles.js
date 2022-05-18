@@ -49,6 +49,16 @@ const styles = (theme) => {
       paddingTop: '90px',
       backgroundImage: `url(images/gradient${isDark ? '_dark' : ''}.jpg)`
     },
+    animateFly: {
+      position: 'absolute',
+      right: '-4%',
+      width: '100%',
+      animation: '$fly 6s cubic-bezier(.75,.02,.31,.87) infinite',
+    },
+    "@keyframes fly": {
+      '0%,to': {transform: 'translateY(5%)'},
+      '50%': {transform: 'translateY(0)'}
+    },
     hotBids: {
       margin: '32px 0',
     },
@@ -91,7 +101,10 @@ const styles = (theme) => {
       backgroundColor: '#8358ff',
       color: '#fff',
       borderRadius: '99px',
-      boxShadow: "4px 5px 10px rgba(108,106,213,.25),inset 2px 2px 6px #a78df0,inset -5px -5px 10px #6336e4"
+      boxShadow: "4px 5px 10px rgba(108,106,213,.25),inset 2px 2px 6px #a78df0,inset -5px -5px 10px #6336e4",
+      '&:hover': {
+        backgroundColor: '#8358ff',
+      },
     },
     secondaryButton: {
       padding: '8px 32px',
