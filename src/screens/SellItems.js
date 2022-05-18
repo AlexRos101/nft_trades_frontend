@@ -1,10 +1,8 @@
 import React from 'react';
 import { Grid, Typography, Box } from '@mui/material';
-import EngineeringOutlinedIcon from '@mui/icons-material/EngineeringOutlined';
-import AllInclusiveIcon from '@mui/icons-material/AllInclusive';
-import PaidOutlinedIcon from '@mui/icons-material/PaidOutlined';
 import useStyles from '../styles/styles';
 import SellItem from '../components/SellItem';
+import Subscribe from './Subscribe';
 
 const SellItems = () => {
   const classes = useStyles();
@@ -36,20 +34,24 @@ const SellItems = () => {
     },
   ];
   return (
-    <Box sx={{ flexGrow: 1, minHeight: '400px', backgroundImage:`url(images/gradient_light.jpg)` }}>
+    <Box sx={{ flexGrow: 1, backgroundImage:`url(images/gradient_light.jpg)`, padding: '32px' }}>
+      <Box sx={{display:'flex', justifyContent: 'center', alignItems: 'center', margin: '32px'}}>
+        <Typography variant="h3">Create and sell your NFTs</Typography>
+      </Box>
       <Grid container className={classes.sectionGridContainer}>
         {sectionItems.map((item) => (
           <Grid
             item
             xs={12}
             md={2.5}
-            minHeight={300}
             key={item.id}
           >
             <SellItem {...item} />
           </Grid>
         ))}
       </Grid>
+
+      <Subscribe />
     </Box>
   );
 };

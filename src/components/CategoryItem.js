@@ -8,7 +8,7 @@ function CategoryItem(props) {
   const { src, title, subtitle, amount, like } = props;
   
   return (
-    <Box sx={{border:'solid 1px rgba(0, 0, 0, 0.2)', borderRadius:'10px', maxWidth: '262px', padding: '16px'}}>
+    <Box sx={{border:'solid 1px rgba(0, 0, 0, 0.2)', borderRadius:'10px', maxWidth: '262px', padding: '16px', marginBottom: '16px'}}>
       <img src={src} />
       <Box sx={{display:'flex', justifyContent: 'space-between', alignItems: 'center',}}>
         <Typography variant="h6">{title}</Typography>

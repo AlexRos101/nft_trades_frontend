@@ -31,9 +31,7 @@ function Home(){
       <Hotbids />
       <Collections />
       <Category />
-      
       <SellItems />
-      <Subscribe />
       <Footer />
       </ThemeProvider>
     </>
